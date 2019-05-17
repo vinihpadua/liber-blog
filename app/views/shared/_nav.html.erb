@@ -1,5 +1,7 @@
-<% Category.all.each do |category| %>
+<nav class="nav nav-pills">
+  <% Category.all.each do |category| %>
+   <li class="nav-item">
+    <%= link_to category.name, posts_path(category: category.name), class:"nav-link" %>
   <li>
-  <%= link_to category.name, posts_path(category: category.name) %>
-  </li>
-<% end %>
+  <% end %>
+</nav>
